@@ -11,11 +11,29 @@
     },
     "devDependencies": {
         "axios": "^0.19",
+        "bootstrap": "^4.0.0",
         "cross-env": "^5.1",
-        "laravel-mix": "^4.0.7",
+        "jquery": "^3.2",
+        "laravel-mix": "^5.0.1",
         "lodash": "^4.17.13",
+        "popper.js": "^1.12",
         "resolve-url-loader": "^2.3.1",
-        "sass": "^1.15.2",
-        "sass-loader": "^7.1.0"
+        "sass": "^1.25.0",
+        "sass-loader": "7.*",
+        "vue": "^2.5.17",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.12.0",
+        "bootstrap-datepicker": "^1.9.0",
+        "bootstrap-select": "^1.13.12",
+        "bootstrap-tagsinput": "^0.7.1",
+        "datatables.net-bs4": "^1.10.20",
+        "font-awesome": "^4.7.0",
+        "moment": "^2.24.0",
+        "query-string": "^6.10.1",
+        "select2": "^4.0.12",
+        "select2-bootstrap-theme": "0.1.0-beta.10",
+        "sweetalert2": "^9.6.1"
     }
 }

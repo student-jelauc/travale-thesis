@@ -1,18 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb58c52d-649d-4b30-a661-0a0a3fa51b9d" name="Default Changelist" comment="" />
+    <list default="true" id="fb58c52d-649d-4b30-a661-0a0a3fa51b9d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Entities/Accommodations/Accommodation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Entities/Accommodations/Room.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Entities/Accommodations/RoomType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Entities/Account.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Entities/Geography/City.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Entities/Geography/Country.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Forms/AccommodationForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Forms/Fields/DateRange.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Forms/Fields/Datepicker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Forms/Fields/Select2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Forms/Fields/Selectpicker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Forms/RoomForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Forms/RoomTypeForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AccommodationsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Observers/UserObserver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Policies/AccommodationPolicy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/breadcrumbs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/ide-helper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/laravel-form-builder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/CityFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/CountryFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_14_213123_create_countries_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_14_213136_create_cities_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_15_203447_create_accounts_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_15_205612_create_accommodations_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_15_210821_create_room_types_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_16_205847_create_rooms_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/GeographySeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/profile-image.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/_cards.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/_charts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/_dropdowns.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/_error.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/_footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/_global.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/_login.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/_navs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/navs/_global.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/navs/_sidebar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/navs/_topbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/sb-admin-2.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/utilities/_animation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/utilities/_background.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/utilities/_border.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/utilities/_display.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/utilities/_progress.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/utilities/_rotate.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/theme/utilities/_text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/accommodations/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/accommodations/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/login1.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email1.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset1.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/register1.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app1.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/breadcrumbs.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/button.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/buttongroup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/checkbox.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/child_form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/choice.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/collection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/date_range.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/datepicker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/errors.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/form-default.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/help_block.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/radio.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/repeated.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/select.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/select2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/static.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/text.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/textarea.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/travale.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/travale.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/laravel/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -105,10 +220,27 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1VqldoQ5ZkmYy32Erwpg3lKeYwx" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/accommodations" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/accommodations" />
+      <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/resources/views/layouts" />
+      <recent name="$PROJECT_DIR$/resources/views/auth/passwords" />
+      <recent name="$PROJECT_DIR$/resources/views/auth" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Entities" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -133,10 +265,29 @@
       <option name="presentableId" value="Default" />
       <updated>1577988596061</updated>
       <workItem from="1577988598759" duration="299000" />
+      <workItem from="1579118086913" duration="3841000" />
+      <workItem from="1579207335084" duration="2747000" />
+      <workItem from="1579353628177" duration="7156000" />
+      <workItem from="1579624057673" duration="7306000" />
+      <workItem from="1579813956346" duration="2222000" />
+      <workItem from="1579877585795" duration="931000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

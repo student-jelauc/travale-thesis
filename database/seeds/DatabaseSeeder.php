@@ -11,6 +11,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        $user = \App\Entities\User::where('email', 'jelauc.valerian@gmail.com')->first();
+        if (!$user) {
+            \App\Entities\User::create([
+                'email' => 'jelauc.valerian@gmail.com',
+                'name' => 'Valerian',
+                'password' => bcrypt('123qwe123'),
+                'email_verified_at' => \Carbon\Carbon::now(),
+            ]);
+        }
+
+        $this->call(GeographySeeder::class);
     }
 }

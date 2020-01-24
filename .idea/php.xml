@@ -90,4 +90,5 @@
       <path value="$PROJECT_DIR$/laravel/vendor/phpdocumentor/reflection-docblock" />
     </include_path>
   </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
 </project>
