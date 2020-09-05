@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 
 use App\Entities\Accommodations\Accommodation;
+use App\Entities\Accommodations\Facility;
 use App\Entities\Accommodations\Room;
 use App\Entities\Accommodations\RoomType;
 use App\Forms\Helpers\FormBuilderTrait;
@@ -24,6 +25,9 @@ class RoomsController extends Controller
         $this->middleware('auth');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function overview()
     {
         return view('rooms.overview', [
@@ -112,6 +116,8 @@ class RoomsController extends Controller
             $room->accommodation_id = request()->accommodation_id;
             $room->save();
 
+            $room->facilities()->sync($form->getFieldValues()['facilities'] ?? []);
+
             app()->get(PhotosController::class)->upload($request, 'room', $room);
         }
 
@@ -177,6 +183,7 @@ class RoomsController extends Controller
         $form->redirectIfNotValid();
 
         $room->fill($form->getFieldValues());
+        $room->facilities()->sync($form->getFieldValues()['facilities'] ?? []);
         $room->save();
 
         flash('Successfully saved')->success();

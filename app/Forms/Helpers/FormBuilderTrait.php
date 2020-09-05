@@ -4,6 +4,9 @@
 namespace App\Forms\Helpers;
 
 
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+
 trait FormBuilderTrait
 {
 
@@ -40,16 +43,24 @@ trait FormBuilderTrait
     protected function staticForm(&$form)
     {
         foreach ($form->getFields() as $field) {
-            $form->remove($field->getName());
-
+            $form->remove($field->getRealName());
             if ($field->getType() === 'star_rating') {
                 $form->add($field->getName(), $field->getType());
-            } elseif (in_array($field->getName(), ['api_username', 'api_password'])) {
-                continue;
+            } elseif ($field->getValue() && in_array($field->getName(), ['client_id', 'partner_id', 'merchant_id', 'descriptor_id'])) {
+                $form->add($field->getName(), 'ref', [
+                    'label' => $field->getOption('label'),
+                    'url' => route(Str::plural(str_replace('_id', '', $field->getName())) . '.show', $field->getValue()),
+                    'value' => $field instanceof \Kris\LaravelFormBuilder\Fields\SelectType
+                        ? @$field->getOption('choices', [])[$field->getValue()]
+                        : $field->getValue(),
+                ]);
             } elseif ($field instanceof \Kris\LaravelFormBuilder\Fields\SelectType) {
                 $form->add($field->getName(), 'static', [
                     'label' => $field->getOption('label'),
-                    'value' => @$field->getOption('choices', [])[$field->getValue()],
+                    'value' => implode(', ', array_intersect_key(
+                        $field->getOption('choices', []),
+                        array_flip(Arr::wrap($field->getValue()))
+                    )),
                 ]);
             } else {
                 $form->add($field->getName(), 'static', [

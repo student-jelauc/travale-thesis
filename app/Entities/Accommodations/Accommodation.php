@@ -10,6 +10,36 @@ use App\Entities\Helpers\HasPhotos;
 use App\Entities\Photo;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * App\Entities\Accommodations\Accommodation
+ *
+ * @property int $id
+ * @property int|null $city_id
+ * @property string $name
+ * @property int $stars
+ * @property string|null $description
+ * @property int $account_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read Account $account
+ * @property-read City|null $city
+ * @property-read \Illuminate\Database\Eloquent\Collection|Photo[] $photos
+ * @property-read int|null $photos_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Entities\Accommodations\Room[] $rooms
+ * @property-read int|null $rooms_count
+ * @method static \Illuminate\Database\Eloquent\Builder|Accommodation newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Accommodation newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Accommodation query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Accommodation whereAccountId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Accommodation whereCityId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Accommodation whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Accommodation whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Accommodation whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Accommodation whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Accommodation whereStars($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Accommodation whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
 class Accommodation extends Model
 {
     use HasPhotos;

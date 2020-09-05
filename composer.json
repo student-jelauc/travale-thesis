@@ -11,8 +11,7 @@
         "php": "^7.2",
         "davejamesmiller/laravel-breadcrumbs": "^5.3",
         "fideloper/proxy": "^4.0",
-        "filp/whoops": "^2.7",
-        "kris/laravel-form-builder": "^1.22",
+        "kris/laravel-form-builder": "1.22.0",
         "laracasts/flash": "^3.0",
         "laravel/framework": "^6.2",
         "laravel/tinker": "^2.0",
@@ -22,6 +21,7 @@
         "yajra/laravel-datatables-html": "^4.20"
     },
     "require-dev": {
+        "filp/whoops": "^2.7",
         "barryvdh/laravel-ide-helper": "^2.6",
         "facade/ignition": "^1.4",
         "fzaninotto/faker": "^1.4",

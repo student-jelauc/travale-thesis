@@ -516,7 +516,7 @@
         },
         {
             "name": "kris/laravel-form-builder",
-            "version": "1.30.0",
+            "version": "1.22.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kristijanhusak/laravel-form-builder.git",

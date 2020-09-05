@@ -8,38 +8,37 @@ use App\Entities\Account;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * App\Entities\Accommodations\RoomType
+ * App\Entities\Accommodations\Facility
  *
  * @property int $id
  * @property string $name
+ * @property int $rating
  * @property int|null $account_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\Entities\Account|null $account
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\RoomType newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\RoomType newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\RoomType query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\RoomType whereAccountId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\RoomType whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\RoomType whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\RoomType whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\RoomType whereUpdatedAt($value)
- * @mixin \Eloquent
+ * @property-read Account|null $account
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Entities\Accommodations\Room[] $rooms
  * @property-read int|null $rooms_count
+ * @method static \Illuminate\Database\Eloquent\Builder|Facility newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Facility newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Facility query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Facility whereAccountId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Facility whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Facility whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Facility whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Facility whereRating($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Facility whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
-class RoomType extends Model
+class Facility extends Model
 {
-    /**
-     * @var string
-     */
-    protected $table = 'room_types';
+    protected $table = 'facilities';
 
     /**
      * @var array
      */
     protected $fillable = [
-        'name',
+        'name', 'rating'
     ];
 
     /**

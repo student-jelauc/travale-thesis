@@ -40,6 +40,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Room whereRoomTypeId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Room whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Entities\Accommodations\Facility[] $facilities
+ * @property-read int|null $facilities_count
  */
 class Room extends Model
 {
@@ -72,5 +74,13 @@ class Room extends Model
     public function roomType()
     {
         return $this->belongsTo(RoomType::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
+     */
+    public function facilities()
+    {
+        return $this->morphToMany(Facility::class, 'entity', 'entity_has_facility');
     }
 }

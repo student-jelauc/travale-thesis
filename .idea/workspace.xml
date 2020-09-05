@@ -2,28 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb58c52d-649d-4b30-a661-0a0a3fa51b9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Forms/Fields/StarRating.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/StarRating.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/star_rating.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Entities/Accommodations/Facility.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_05_193415_create_facilities_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_05_204700_create_entity_has_facility_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/FacilitiesSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Entities/Accommodations/Accommodation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Accommodations/Accommodation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Forms/AccommodationForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Forms/AccommodationForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Entities/Accommodations/Room.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Accommodations/Room.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Entities/Accommodations/RoomType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Accommodations/RoomType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Entities/Photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Photo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Forms/Helpers/FormBuilderTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Forms/Helpers/FormBuilderTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Forms/RoomForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Forms/RoomForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Forms/RoomsForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Forms/RoomsForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoomsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoomsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/laravel-form-builder.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/laravel-form-builder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_15_205612_create_accommodations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_15_205612_create_accommodations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Dropzone.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Dropzone.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Gallery.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Gallery.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/accommodations/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/accommodations/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/rooms/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rooms/overview.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -200,18 +194,18 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Forms/Fields" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/seeds" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/database/seeds" />
       <recent name="$PROJECT_DIR$/app/Forms/Fields" />
       <recent name="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder" />
       <recent name="$PROJECT_DIR$/resources/views/rooms" />
       <recent name="$PROJECT_DIR$/app/Entities/Accommodations" />
-      <recent name="$PROJECT_DIR$/public/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Http/Controllers" />
@@ -258,7 +252,7 @@
       <workItem from="1588708876038" duration="139000" />
       <workItem from="1588782662644" duration="1057000" />
       <workItem from="1588873619013" duration="106000" />
-      <workItem from="1599245879075" duration="26996000" />
+      <workItem from="1599245879075" duration="30380000" />
     </task>
     <task id="LOCAL-00001" summary="Implement Database Logics&#10;Implement Entity Forms&#10;Add bootstrap theme&#10;Add permissions package">
       <created>1579878693689</created>
@@ -281,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599327757404</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add Accommodations Stars">
+      <created>1599334378451</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1599334378451</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,6 +307,7 @@
     <MESSAGE value="Implement Database Logics&#10;Implement Entity Forms&#10;Add bootstrap theme&#10;Add permissions package" />
     <MESSAGE value="Implement Accommodations Controller" />
     <MESSAGE value="Implement Rooms Controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Rooms Controller" />
+    <MESSAGE value="Add Accommodations Stars" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Accommodations Stars" />
   </component>
 </project>
