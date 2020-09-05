@@ -13,7 +13,9 @@
                             <a href="{{ route('rooms.show', $room) }}" class="list-group-item list-group-item-action">
                                 <div class="row">
                                     <div class="col-md-1 align-middle">
-                                        <img class="img-thumbnail" src="{{ asset('images/room-image.svg') }}">
+                                        <img class="img-thumbnail"
+                                             src="{{ $room->photosUrl()->first() ?? asset('images/room-image.svg') }}"
+                                             alt="{{ $room->name }}"/>
                                     </div>
                                     <div class="col-md-11">
                                         <div class="flex-column align-items-start">

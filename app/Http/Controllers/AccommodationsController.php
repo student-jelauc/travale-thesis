@@ -70,7 +70,7 @@ class AccommodationsController extends Controller
 
         flash('Successfully created')->success();
 
-        $this->uploadPhoto($request, $accommodation);
+        app()->get(PhotosController::class)->upload($request,'accommodation', $accommodation);
 
         return redirect()->route('accommodations.show', $accommodation);
     }
@@ -90,9 +90,6 @@ class AccommodationsController extends Controller
         return view('accommodations.show', [
             'form' => $form,
             'accommodation' => $accommodation,
-            'photos' => $accommodation->photos->map(function ($photo) {
-                return Storage::disk('public')->url($photo->path);
-            }),
             'roomsTypes' => $accommodation->rooms()
                 ->selectRaw('room_types.id, room_types.name, count(*) as rooms_count')
                 ->join('room_types', 'room_types.id', '=', 'rooms.room_type_id')
@@ -154,32 +151,6 @@ class AccommodationsController extends Controller
                 ];
             })
         );
-    }
-
-    /**
-     * @param Request $request
-     * @param Accommodation $accommodation
-     */
-    public function uploadPhoto(Request $request, Accommodation $accommodation)
-    {
-        foreach ((array)$request->file('file', []) as $file) {
-            $name = $file->getClientOriginalName();
-            $path = $file->store("accommodations/{$accommodation->id}", 'public');
-
-            $accommodation->photos()->create([
-                'path' => $path,
-                'name' => $name,
-            ]);
-        }
-    }
-
-    /**
-     * @param Request $request
-     * @param Accommodation $accommodation
-     */
-    public function deletePhoto(Request $request, Accommodation $accommodation)
-    {
-        $accommodation->photos()->where('name', $request->file)->delete();
     }
 
     /**

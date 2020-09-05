@@ -10,7 +10,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-2">
-                        <gallery :images="{{ $photos->toJson() }}"/>
+                        <gallery :images="{{ $accommodation->photosUrl()->count() ? $accommodation->photosUrl() : collect(asset('images/accommodation-image.svg')) }}"/>
                     </div>
                     <div class="col-md-10">
                         {!! form_start($form) !!}

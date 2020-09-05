@@ -6,7 +6,7 @@
             <div class="col-12">
                 <div class="form-group">
                     <label>Photos</label>
-                    <dropzone url="{{ route('accommodations.photos', $accommodation) }}"/>
+                    <dropzone url="{{ route('photos.accommodation', $accommodation) }}"/>
                 </div>
             </div>
         </div>

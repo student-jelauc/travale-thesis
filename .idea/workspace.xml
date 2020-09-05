@@ -2,74 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb58c52d-649d-4b30-a661-0a0a3fa51b9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Entities/Accommodations/AccommodationPhoto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Forms/Helpers/FormBuilderTrait.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Forms/RoomsForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/RoomsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Policies/RoomPolicy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/AccommodationFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_24_174335_create_accommodation_photos_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/AccommodationsSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/PermissionsSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/RolesSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/RoomTypesSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/accommodation-image.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/room-image.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Dropzone.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Gallery.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/accommodations/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/accommodations/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/rooms/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/rooms/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/rooms/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/rooms/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/flash/message.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/flash/modal.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Entities/Helpers/HasPhotos.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Entities/Photo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PhotosController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/rooms/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Entities/Accommodations/Accommodation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Accommodations/Accommodation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Entities/Accommodations/AccommodationPhoto.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Entities/Accommodations/Room.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Accommodations/Room.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Entities/Accommodations/RoomType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Accommodations/RoomType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Forms/AccommodationForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Forms/AccommodationForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Forms/RoomForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Forms/RoomForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Forms/RoomTypeForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Forms/RoomTypeForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AccommodationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AccommodationsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/UserObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/UserObserver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/AccommodationPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/AccommodationPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_15_205612_create_accommodations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_15_205612_create_accommodations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_16_205847_create_rooms_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_16_205847_create_rooms_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/accommodations/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/accommodations/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoomsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoomsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_24_174335_create_accommodation_photos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_05_162401_create_photos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/accommodations/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/accommodations/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/accommodations/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/accommodations/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/accommodations/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/accommodations/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app1.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/breadcrumbs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/breadcrumbs.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/select2.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/select2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/rooms/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rooms/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/rooms/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rooms/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/rooms/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rooms/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/rooms/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rooms/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/public/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/testing/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/testing/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -246,18 +199,18 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/rooms" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/rooms" />
+      <recent name="$PROJECT_DIR$/app/Entities/Accommodations" />
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/resources/sass/theme/pages" />
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
-      <recent name="$PROJECT_DIR$/public/images/theme" />
-      <recent name="$PROJECT_DIR$/resources/sass/theme" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Entities" />
@@ -303,7 +256,7 @@
       <workItem from="1588708876038" duration="139000" />
       <workItem from="1588782662644" duration="1057000" />
       <workItem from="1588873619013" duration="106000" />
-      <workItem from="1599245879075" duration="18077000" />
+      <workItem from="1599245879075" duration="21594000" />
     </task>
     <task id="LOCAL-00001" summary="Implement Database Logics&#10;Implement Entity Forms&#10;Add bootstrap theme&#10;Add permissions package">
       <created>1579878693689</created>
@@ -312,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579878693689</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implement Accommodations Controller">
+      <created>1599321445105</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599321445105</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,6 +295,7 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Implement Database Logics&#10;Implement Entity Forms&#10;Add bootstrap theme&#10;Add permissions package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Database Logics&#10;Implement Entity Forms&#10;Add bootstrap theme&#10;Add permissions package" />
+    <MESSAGE value="Implement Accommodations Controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Accommodations Controller" />
   </component>
 </project>

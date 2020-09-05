@@ -4,6 +4,7 @@
 namespace App\Entities\Accommodations;
 
 
+use App\Entities\Helpers\HasPhotos;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -17,27 +18,33 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $adults_capacity
  * @property int $children_capacity
  * @property int $infants_capacity
+ * @property string|null $description
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Entities\Accommodations\Accommodation $accommodation
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Entities\Accommodations\RoomPhoto[] $photos
+ * @property-read int|null $photos_count
  * @property-read \App\Entities\Accommodations\RoomType $roomType
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\Room newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\Room newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\Room query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\Room whereAccommodationId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\Room whereAdultsCapacity($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\Room whereChildrenCapacity($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\Room whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\Room whereFloor($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\Room whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\Room whereInfantsCapacity($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\Room whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\Room whereRoomTypeId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\Room whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Room newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Room newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Room query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Room whereAccommodationId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Room whereAdultsCapacity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Room whereChildrenCapacity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Room whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Room whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Room whereFloor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Room whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Room whereInfantsCapacity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Room whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Room whereRoomTypeId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Room whereUpdatedAt($value)
  * @mixin \Eloquent
  */
 class Room extends Model
 {
+    use HasPhotos;
+
     /**
      * @var string
      */

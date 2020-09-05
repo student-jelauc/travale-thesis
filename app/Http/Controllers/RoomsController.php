@@ -10,6 +10,8 @@ use App\Entities\Accommodations\RoomType;
 use App\Forms\Helpers\FormBuilderTrait;
 use App\Forms\RoomForm;
 use App\Forms\RoomsForm;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class RoomsController extends Controller
 {
@@ -21,6 +23,13 @@ class RoomsController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    public function listing()
+    {
+        return view('rooms.list', [
+            'rooms' => Room::paginate(25)
+        ]);
     }
 
     /**
@@ -60,12 +69,17 @@ class RoomsController extends Controller
             'url' => route('rooms.store'),
         ]);
 
+        $form->setFormOption('enctype', 'multipart/form-data');
+        $form->add('file', 'file', [
+            'label' => 'Photos',
+            'attr' => ['multiple' => true, 'class' => 'form-control-file']
+        ]);
+
         if ($accommodation) {
             $form->getField('accommodation_id')
                 ->setOption('selected', $accommodation->id)
             ;
         }
-
 
         if ($type) {
             $form->getField('room_type_id')
@@ -81,10 +95,11 @@ class RoomsController extends Controller
     }
 
     /**
+     * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function store()
+    public function store(Request $request)
     {
         $this->authorize('create', Room::class);
 
@@ -97,6 +112,8 @@ class RoomsController extends Controller
             $room->name = $name;
             $room->accommodation_id = request()->accommodation_id;
             $room->save();
+
+            app()->get(PhotosController::class)->upload($request, 'room', $room);
         }
 
         flash('Successfully created')->success();

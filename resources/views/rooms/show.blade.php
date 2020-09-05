@@ -10,7 +10,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-2">
-                        <img src="{{ asset('images/room-image.svg') }}" class="img-thumbnail align-bottom">
+                        <gallery :images="{{ $room->photosUrl()->count() ? $room->photosUrl() : collect(asset('images/room-image.svg')) }}"/>
                     </div>
                     <div class="col-md-10">
                         {!! form_start($form) !!}

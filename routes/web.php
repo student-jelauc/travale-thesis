@@ -12,10 +12,6 @@ Route::prefix('accommodations')->group(function () {
     Route::get('show/{accommodation}', 'AccommodationsController@show')->name('accommodations.show');
     Route::get('edit/{accommodation}', 'AccommodationsController@edit')->name('accommodations.edit');
     Route::post('update/{accommodation}', 'AccommodationsController@update')->name('accommodations.update');
-
-    Route::get('photos/{accommodation}', 'AccommodationsController@photos')->name('accommodations.photos');
-    Route::post('photos/{accommodation}', 'AccommodationsController@uploadPhoto');
-    Route::delete('photos/{accommodation}', 'AccommodationsController@deletePhoto');
 });
 
 Route::prefix('rooms')->group(function () {
@@ -25,5 +21,15 @@ Route::prefix('rooms')->group(function () {
     Route::get('edit/{room}', 'RoomsController@edit')->name('rooms.edit');
     Route::post('update/{room}', 'RoomsController@update')->name('rooms.update');
     Route::get('{accommodation}/{type?}', 'RoomsController@index')->name('rooms');
+});
+
+Route::prefix('photos')->group(function () {
+    Route::get('accommodations/{accommodation}', 'PhotosController@get')->name('photos.accommodation');
+    Route::post('accommodations/{accommodation}', 'PhotosController@upload');
+    Route::delete('accommodations/{accommodation}', 'PhotosController@delete');
+
+    Route::get('rooms/{room}', 'PhotosController@get')->name('photos.room');
+    Route::post('rooms/{room}', 'PhotosController@upload');
+    Route::delete('rooms/{room}', 'PhotosController@delete');
 });
 

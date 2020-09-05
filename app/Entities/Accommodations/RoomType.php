@@ -25,6 +25,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\RoomType whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Accommodations\RoomType whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Entities\Accommodations\Room[] $rooms
+ * @property-read int|null $rooms_count
  */
 class RoomType extends Model
 {
