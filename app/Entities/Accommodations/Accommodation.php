@@ -43,7 +43,7 @@ class Accommodation extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'description', 'account_id',
+        'name', 'description', 'account_id', 'city_id',
     ];
 
     /**
@@ -60,5 +60,21 @@ class Accommodation extends Model
     public function city()
     {
         return $this->belongsTo(City::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function rooms()
+    {
+        return $this->hasMany(Room::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function photos()
+    {
+        return $this->hasMany(AccommodationPhoto::class);
     }
 }

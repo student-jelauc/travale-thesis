@@ -12,9 +12,6 @@ class UserObserver
      */
     public function created(User $user)
     {
-        Account::create([
-            'name' => $user->name,
-            'master' => $user->id,
-        ]);
+
     }
 }

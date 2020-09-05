@@ -5,6 +5,7 @@ namespace App\Entities;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Permission\Traits\HasRoles;
 
 /**
  * App\Entities\User
@@ -33,10 +34,18 @@ use Illuminate\Notifications\Notifiable;
  * @mixin \Eloquent
  * @property int|null $account_id
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User whereAccountId($value)
+ * @property-read \App\Entities\Account|null $account
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Permission\Models\Permission[] $permissions
+ * @property-read int|null $permissions_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Permission\Models\Role[] $roles
+ * @property-read int|null $roles_count
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User permission($permissions)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User role($roles, $guard = null)
  */
 class User extends Authenticatable
 {
     use Notifiable;
+    use HasRoles;
 
     /**
      * The attributes that are mass assignable.

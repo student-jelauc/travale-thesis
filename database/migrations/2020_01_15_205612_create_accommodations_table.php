@@ -17,7 +17,7 @@ class CreateAccommodationsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('city_id')->nullable();
             $table->string('name');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->unsignedBigInteger('account_id');
             $table->timestamps();
             $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');

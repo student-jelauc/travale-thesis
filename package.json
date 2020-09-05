@@ -10,30 +10,32 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
-        "axios": "^0.19",
-        "bootstrap": "^4.0.0",
+        "axios": "^0.19.2",
+        "bootstrap": "^4.5.2",
         "cross-env": "^5.1",
-        "jquery": "^3.2",
-        "laravel-mix": "^5.0.1",
-        "lodash": "^4.17.13",
-        "popper.js": "^1.12",
+        "jquery": "^3.5.1",
+        "laravel-mix": "^5.0.5",
+        "lodash": "^4.17.20",
+        "popper.js": "^1.16.1",
         "resolve-url-loader": "^2.3.1",
-        "sass": "^1.25.0",
+        "sass": "^1.26.10",
         "sass-loader": "7.*",
-        "vue": "^2.5.17",
-        "vue-template-compiler": "^2.6.10"
+        "vue": "^2.6.12",
+        "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "^5.12.0",
+        "@fortawesome/fontawesome-free": "^5.14.0",
         "bootstrap-datepicker": "^1.9.0",
-        "bootstrap-select": "^1.13.12",
+        "bootstrap-select": "^1.13.18",
         "bootstrap-tagsinput": "^0.7.1",
-        "datatables.net-bs4": "^1.10.20",
+        "datatables.net-bs4": "^1.10.21",
         "font-awesome": "^4.7.0",
-        "moment": "^2.24.0",
-        "query-string": "^6.10.1",
-        "select2": "^4.0.12",
+        "moment": "^2.27.0",
+        "query-string": "^6.13.1",
+        "select2": "^4.0.13",
         "select2-bootstrap-theme": "0.1.0-beta.10",
-        "sweetalert2": "^9.6.1"
+        "sweetalert2": "^9.17.2",
+        "vue-gallery": "^2.0.1",
+        "vue2-dropzone": "^3.6.0"
     }
 }

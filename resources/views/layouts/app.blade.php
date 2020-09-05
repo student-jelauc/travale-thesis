@@ -9,9 +9,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -21,6 +18,8 @@
     @stack('styles')
 </head>
 <body id="page-top">
+
+<div id="app">
 
 <!-- Page Wrapper -->
 <div id="wrapper">
@@ -56,7 +55,7 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ route('accommodations') }}">
                 <i class="fas fa-fw fa-home"></i>
                 <span>Accommodations</span>
             </a>
@@ -96,7 +95,7 @@
         <div id="content">
 
             <!-- Topbar -->
-            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm">
 
                 <!-- Sidebar Toggle (Topbar) -->
                 <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -254,6 +253,12 @@
                     {{ Breadcrumbs::render() }}
                 </div>
 
+                <div class="row">
+                    <div class="col-md-12">
+                        @include('flash::message')
+                    </div>
+                </div>
+
                 @yield('content')
 
             </div>
@@ -280,13 +285,21 @@
 </div>
 <!-- End of Page Wrapper -->
 
+</div>
+
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
 
 @routes
+<script src="{{ asset('js/app.js') }}"></script>
 @stack('scripts')
+<script defer>
+    const app = new Vue({
+        el: '#app',
+    });
+</script>
 
 </body>
 </html>

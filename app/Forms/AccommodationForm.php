@@ -9,10 +9,15 @@ use Kris\LaravelFormBuilder\Form;
 
 class AccommodationForm extends Form
 {
+    /**
+     * @var bool
+     */
+    protected $clientValidationEnabled = false;
+
     public function buildForm()
     {
         $this
-            ->add('city', 'select2', [
+            ->add('city_id', 'select2', [
                 'rules' => 'required',
                 'label' => 'Location',
                 'choices' => City::with('country')->get()->reduce(function (&$carry, $city) {

@@ -20,7 +20,7 @@ class AccommodationPolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return $user->hasPermissionTo('accommodations_view');
     }
 
     /**
@@ -32,7 +32,7 @@ class AccommodationPolicy
      */
     public function view(User $user, Accommodation $accommodation)
     {
-        //
+        return $user->hasPermissionTo('accommodations_view') && $this->appertain($user, $accommodation);
     }
 
     /**
@@ -43,7 +43,7 @@ class AccommodationPolicy
      */
     public function create(User $user)
     {
-        //
+        return $user->hasPermissionTo('accommodations_create');
     }
 
     /**
@@ -55,7 +55,7 @@ class AccommodationPolicy
      */
     public function update(User $user, Accommodation $accommodation)
     {
-        //
+        return $user->hasPermissionTo('accommodations_update') && $this->appertain($user, $accommodation);
     }
 
     /**
@@ -67,7 +67,7 @@ class AccommodationPolicy
      */
     public function delete(User $user, Accommodation $accommodation)
     {
-        //
+        return $user->hasPermissionTo('accommodations_delete') && $this->appertain($user, $accommodation);
     }
 
     /**
@@ -79,7 +79,7 @@ class AccommodationPolicy
      */
     public function restore(User $user, Accommodation $accommodation)
     {
-        //
+        return $user->hasPermissionTo('accommodations_delete') && $this->appertain($user, $accommodation);
     }
 
     /**
@@ -91,6 +91,16 @@ class AccommodationPolicy
      */
     public function forceDelete(User $user, Accommodation $accommodation)
     {
-        //
+        return $user->hasPermissionTo('accommodations_delete') && $this->appertain($user, $accommodation);
+    }
+
+    /**
+     * @param User $user
+     * @param Accommodation $accommodation
+     * @return bool
+     */
+    protected function appertain(User $user, Accommodation $accommodation)
+    {
+        return $user->account_id === $accommodation->account_id;
     }
 }

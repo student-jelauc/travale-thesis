@@ -7,19 +7,28 @@ namespace App\Forms;
 use App\Entities\Accommodations\Accommodation;
 use App\Entities\Accommodations\RoomType;
 use App\Entities\Geography\City;
+use Illuminate\Support\Arr;
 use Illuminate\Validation\Rule;
 use Kris\LaravelFormBuilder\Form;
 
 class RoomForm extends Form
 {
+    /**
+     * @var bool
+     */
+    protected $clientValidationEnabled = false;
+
     public function buildForm()
     {
         $this
             ->add('accommodation_id', 'select2', [
                 'rules' => 'required',
                 'label' => 'Accommodation',
-                'choices' => Accommodation::whereAccountId(\Auth::user()->account_id)->pluck('name', 'id'),
+                'choices' => Accommodation::whereAccountId(\Auth::user()->account_id)->pluck('name', 'id')->toArray(),
                 'empty_value' => '- Accommodation -',
+            ])
+            ->add('name', 'text', [
+                'rules' => 'required',
             ])
             ->add('floor', 'text', [
                 'rules' => 'required',
@@ -28,17 +37,8 @@ class RoomForm extends Form
             ->add('room_type_id', 'select2', [
                 'rules' => 'required',
                 'label' => 'Room Type',
-                'choices' => RoomType::whereAccountId(\Auth::user()->account_id)->orWhereNull('account_id')->pluck('name', 'id'),
+                'choices' => RoomType::whereAccountId(\Auth::user()->account_id)->orWhereNull('account_id')->pluck('name', 'id')->toArray(),
                 'empty_value' => '- Room Type -',
-            ])
-            ->add('name[]', 'select2', [
-                'label' => 'Room names',
-                'rules' => ['required', Rule::unique('rooms')->where(function ($query) {
-                    $query->where('accommodation_id', request()->input('accommodation_id'))
-                        ->whereIn('name', request()->input('name'));
-                })],
-                'multiple' => true,
-                'tags' => true,
             ])
             ->add('adults_capacity', 'text', [
                 'rules' => 'required|numeric|min:0',
@@ -52,6 +52,7 @@ class RoomForm extends Form
                 'rules' => 'required|numeric|min:0',
                 'default_value' => 0,
             ])
+            ->add('description', 'textarea');
         ;
     }
 }

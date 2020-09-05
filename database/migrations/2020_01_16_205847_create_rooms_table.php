@@ -22,6 +22,7 @@ class CreateRoomsTable extends Migration
             $table->unsignedInteger('adults_capacity')->index();
             $table->unsignedInteger('children_capacity')->default(0);
             $table->unsignedInteger('infants_capacity')->default(0);
+            $table->text('description')->nullable();
             $table->timestamps();
             $table->foreign('accommodation_id')->references('id')->on('accommodations')->onDelete('cascade');
             $table->foreign('room_type_id')->references('id')->on('room_types')->onDelete('cascade');

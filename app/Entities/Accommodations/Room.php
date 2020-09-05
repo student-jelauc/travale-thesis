@@ -48,7 +48,7 @@ class Room extends Model
      */
     protected $fillable = [
         'name', 'accommodation_id', 'room_type_id', 'floor',
-        'adults_capacity', 'children_capacity', 'infants_capacity'
+        'adults_capacity', 'children_capacity', 'infants_capacity', 'description'
     ];
 
     /**

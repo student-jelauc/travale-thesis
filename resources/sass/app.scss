@@ -11,6 +11,18 @@
 @import "~select2/dist/css/select2.min.css";
 @import "~select2-bootstrap-theme/dist/select2-bootstrap.min.css";
 @import "~bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.min.css";
+@import '~vue2-dropzone/dist/vue2Dropzone.min.css';
+
+.btn-action {
+    min-width: 80px;
+}
+
+.form-control-static {
+    color: rgba(0,0,0,.9);
+    //font-weight: bolder;
+    padding: 7px 7px 7px 7px;
+    background-color: $light;
+}
 
 [class*="col-"] .select2-container {
     width: 100% !important;

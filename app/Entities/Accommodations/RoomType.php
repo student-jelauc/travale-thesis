@@ -47,4 +47,12 @@ class RoomType extends Model
     {
         return $this->belongsTo(Account::class);
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function rooms()
+    {
+        return $this->hasMany(Room::class);
+    }
 }
