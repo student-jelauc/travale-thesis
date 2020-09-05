@@ -1,7 +1,7 @@
 <template>
     <div>
         <vue-gallery :images="images" :index="index" @close="index = null"></vue-gallery>
-        <img :src="images[0]" @click="index = 0" class="img-thumbnail align-bottom"/>
+        <img :src="images[0]" @click="index = 0" class="img-thumbnail align-bottom rounded-0"/>
     </div>
 </template>
 

@@ -20,6 +20,7 @@ Route::prefix('rooms')->group(function () {
     Route::get('show/{room}', 'RoomsController@show')->name('rooms.show');
     Route::get('edit/{room}', 'RoomsController@edit')->name('rooms.edit');
     Route::post('update/{room}', 'RoomsController@update')->name('rooms.update');
+    Route::get('overview', 'RoomsController@overview')->name('rooms.overview');
     Route::get('{accommodation}/{type?}', 'RoomsController@index')->name('rooms');
 });
 

@@ -5,7 +5,18 @@
         <div class="col-md-12">
             <div class="card border-0 shadow-sm">
                 <div class="card-footer">
-                    <select class="form-control"><option>Select Hotel</option></select>
+                    <div class="row">
+                        <div class="col">
+                            <select class="form-control">
+                                <option>Select Hotel</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <select class="form-control">
+                                <option>Select Type</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-body">
                     <div class="list-group">

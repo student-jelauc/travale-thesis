@@ -23,7 +23,7 @@ class Accommodation extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'description', 'account_id', 'city_id',
+        'name', 'description', 'account_id', 'city_id', 'stars'
     ];
 
     /**

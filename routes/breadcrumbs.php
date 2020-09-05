@@ -37,6 +37,10 @@ Breadcrumbs::for('rooms', function ($trail, Accommodation $accommodation, $type 
     }
 });
 
+Breadcrumbs::for('rooms.overview', function ($trail) {
+    $trail->push('Rooms');
+});
+
 Breadcrumbs::for('rooms.create', function ($trail, ?Accommodation $accommodation) {
     if ($accommodation) {
         $trail->parent('accommodations.show', $accommodation);

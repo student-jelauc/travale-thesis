@@ -20,7 +20,8 @@
                 return {
                     url: this.url,
                     addRemoveLinks: true,
-                    dictDefaultMessage: "<i class='fas fa-cloud-upload'></i>Drop files here",
+                    dictDefaultMessage: "<i class='fas fa-upload mr-2'></i>Drop files here",
+                    acceptedFiles: 'image/*',
                     headers: {
                         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
                     },

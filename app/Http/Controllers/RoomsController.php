@@ -11,7 +11,6 @@ use App\Forms\Helpers\FormBuilderTrait;
 use App\Forms\RoomForm;
 use App\Forms\RoomsForm;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class RoomsController extends Controller
 {
@@ -25,9 +24,9 @@ class RoomsController extends Controller
         $this->middleware('auth');
     }
 
-    public function listing()
+    public function overview()
     {
-        return view('rooms.list', [
+        return view('rooms.overview', [
             'rooms' => Room::paginate(25)
         ]);
     }

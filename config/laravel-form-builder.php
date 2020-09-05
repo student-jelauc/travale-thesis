@@ -49,5 +49,6 @@ return [
         'daterange' => \App\Forms\Fields\DateRange::class,
         'selectpicker' => \App\Forms\Fields\Selectpicker::class,
         'select2' => \App\Forms\Fields\Select2::class,
+        'star_rating' => \App\Forms\Fields\StarRating::class,
     ],
 ];

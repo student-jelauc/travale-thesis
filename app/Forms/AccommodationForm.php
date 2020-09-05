@@ -29,6 +29,7 @@ class AccommodationForm extends Form
             ->add('name', 'text', [
                 'rules' => 'required',
             ])
+            ->add('stars', 'star_rating')
             ->add('description', 'textarea')
         ;
     }

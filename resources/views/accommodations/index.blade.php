@@ -18,15 +18,18 @@
                                              alt="{{ $accommodation->name }}"/>
                                     </div>
                                     <div class="col-md-11">
-                                        <div class="flex-column align-items-start">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1">{{ $accommodation->name }}</h5>
-                                                <small>{{ $accommodation->rooms()->count() }} rooms</small>
+                                        <div class="row">
+                                            <div class="col-md-11"><h5 class="mb-1">{{ $accommodation->name }}</h5></div>
+                                            <div class="col-md-1"><small class="float-right">{{ $accommodation->rooms()->count() }} rooms</small></div>
+                                            <div class="col-md-12">
+                                                <p class="mb-1">
+                                                    {{ strlen($accommodation->description) > 200 ? substr($accommodation->description, 0, 200) . '...' : $accommodation->description }}
+                                                </p>
                                             </div>
-                                            <p class="mb-1">
-                                                {{ strlen($accommodation->description) > 200 ? substr($accommodation->description, 0, 200) . '...' : $accommodation->description }}
-                                            </p>
-                                            <small>Donec id elit non mi porta.</small>
+                                            <div class="col-md-12">
+                                                <small><star-rating value="{{ $accommodation->stars }}" size="15"/></small>
+                                                <small class="align-bottom">{{ $accommodation->city->name }} / {{ $accommodation->city->country->name }}</small>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

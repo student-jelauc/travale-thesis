@@ -41,7 +41,10 @@ trait FormBuilderTrait
     {
         foreach ($form->getFields() as $field) {
             $form->remove($field->getName());
-            if (in_array($field->getName(), ['api_username', 'api_password'])) {
+
+            if ($field->getType() === 'star_rating') {
+                $form->add($field->getName(), $field->getType());
+            } elseif (in_array($field->getName(), ['api_username', 'api_password'])) {
                 continue;
             } elseif ($field instanceof \Kris\LaravelFormBuilder\Fields\SelectType) {
                 $form->add($field->getName(), 'static', [

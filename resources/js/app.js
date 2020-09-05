@@ -38,3 +38,4 @@ Vue.mixin({
 
 Vue.component('dropzone', require('./components/Dropzone').default);
 Vue.component('gallery', require('./components/Gallery').default);
+Vue.component('star-rating', require('./components/StarRating').default);
