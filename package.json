@@ -33,7 +33,6 @@
         "moment": "^2.27.0",
         "query-string": "^6.13.1",
         "select2": "^4.0.13",
-        "select2-bootstrap-theme": "0.1.0-beta.10",
         "sweetalert2": "^9.17.2",
         "vue-gallery": "^2.0.1",
         "vue-star-rating": "^1.6.1",

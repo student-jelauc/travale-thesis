@@ -79,4 +79,12 @@ class Accommodation extends Model
     {
         return $this->hasMany(Room::class);
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public static function selectQuery()
+    {
+        return static::where('account_id', \Auth::user()->account_id);
+    }
 }

@@ -13,7 +13,7 @@ class PermissionsSeeder extends Seeder
     {
         foreach (['view', 'create', 'update', 'delete'] as $action) {
             \Spatie\Permission\Models\Permission::firstOrCreate([
-                'name' => "accommodations_$action",
+                'name' => "accommodations/$action",
             ]);
         }
     }

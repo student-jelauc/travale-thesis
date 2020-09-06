@@ -21,9 +21,8 @@
         "yajra/laravel-datatables-html": "^4.20"
     },
     "require-dev": {
-        "filp/whoops": "^2.7",
         "barryvdh/laravel-ide-helper": "^2.6",
-        "facade/ignition": "^1.4",
+        "filp/whoops": "^2.7",
         "fzaninotto/faker": "^1.4",
         "laravel/ui": "^1.1",
         "mockery/mockery": "^1.0",

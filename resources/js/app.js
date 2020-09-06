@@ -20,14 +20,11 @@ window.Swal = Swal.mixin({
 });
 
 require('bootstrap-datepicker');
-require('bootstrap-select');
 require('bootstrap-tagsinput');
 require('datatables.net-bs4');
 require('moment');
 require('select2');
 
-
-$.fn.select2.defaults.set("theme", "bootstrap");
 
 Vue.mixin({
     methods: {
@@ -39,3 +36,4 @@ Vue.mixin({
 Vue.component('dropzone', require('./components/Dropzone').default);
 Vue.component('gallery', require('./components/Gallery').default);
 Vue.component('star-rating', require('./components/StarRating').default);
+Vue.component('v-select', require('./components/VSelect').default);

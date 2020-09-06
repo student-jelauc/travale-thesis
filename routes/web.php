@@ -12,6 +12,7 @@ Route::prefix('accommodations')->group(function () {
     Route::get('show/{accommodation}', 'AccommodationsController@show')->name('accommodations.show');
     Route::get('edit/{accommodation}', 'AccommodationsController@edit')->name('accommodations.edit');
     Route::post('update/{accommodation}', 'AccommodationsController@update')->name('accommodations.update');
+    Route::get('select', 'AccommodationsController@select')->name('accommodations.select');
 });
 
 Route::prefix('rooms')->group(function () {
@@ -32,5 +33,11 @@ Route::prefix('photos')->group(function () {
     Route::get('rooms/{room}', 'PhotosController@get')->name('photos.room');
     Route::post('rooms/{room}', 'PhotosController@upload');
     Route::delete('rooms/{room}', 'PhotosController@delete');
+});
+
+Route::prefix('room/types')->group(function () {
+    Route::get('/', 'RoomTypesController@index')->name('room.types');
+    Route::post('/', 'RoomTypesController@store');
+    Route::get('/{type}/delete', 'RoomTypesController@delete')->name('room.types.delete');
 });
 

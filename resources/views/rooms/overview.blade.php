@@ -7,13 +7,21 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col">
-                            <select class="form-control">
-                                <option>Select Hotel</option>
+                            <v-select name="accommodation_id" route-name="accommodations.select" placeholder="Select Accommodation"></v-select>
+                        </div>
+                        <div class="col">
+                            <select class="form-control" name="room_type_id">
+                                <option>Select Type</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <select class="form-control" name="facilitiy_id[]">
+                                <option>Select Facilities</option>
                             </select>
                         </div>
                         <div class="col">
                             <select class="form-control">
-                                <option>Select Type</option>
+                                <option>Select Floor</option>
                             </select>
                         </div>
                     </div>

@@ -19,9 +19,14 @@ class RoomTypeForm extends Form
      */
     public function buildForm()
     {
+        $this->setFormOption('class', 'form-inline');
+        $this->setFormOption('method', 'POST');
+        $this->setFormOption('template', 'vendor.laravel-form-builder.form');
+
         $this
             ->add('name', 'text', [
                 'rules' => 'required',
+                'label' => false,
             ])
         ;
     }

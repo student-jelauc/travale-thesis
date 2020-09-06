@@ -7,8 +7,8 @@ namespace App\Http\Controllers;
 use App\Entities\Accommodations\Accommodation;
 use App\Forms\AccommodationForm;
 use App\Forms\Helpers\FormBuilderTrait;
+use App\Helpers\Select2Builder;
 use Illuminate\Http\Request;
-use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 
 class AccommodationsController extends Controller
@@ -24,6 +24,9 @@ class AccommodationsController extends Controller
         $this->authorizeResource(Accommodation::class, 'accommodation');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
     {
         $accommodations = Accommodation::orderBy('name')->paginate(10);
@@ -164,5 +167,17 @@ class AccommodationsController extends Controller
         flash("Accommodation '{$accommodation->name}' deleted.")->success();
 
         return redirect()->route('accommodations');
+    }
+
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function select()
+    {
+        $accommodations = Accommodation::selectQuery();
+
+        $builder = new Select2Builder($accommodations);
+
+        return $builder->make();
     }
 }

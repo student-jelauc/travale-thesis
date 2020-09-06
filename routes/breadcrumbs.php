@@ -61,3 +61,7 @@ Breadcrumbs::for('rooms.edit', function ($trail, Room $room) {
     $trail->push('Edit');
 });
 
+// Room Types
+Breadcrumbs::for('room.types', function ($trail) {
+    $trail->push('Room Types');
+});

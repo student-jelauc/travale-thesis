@@ -13,10 +13,10 @@ class RolesSeeder extends Seeder
     {
         $roles = [
             'master' => [
-                'accommodations_view',
-                'accommodations_create',
-                'accommodations_delete',
-                'accommodations_update',
+                'accommodations/view',
+                'accommodations/create',
+                'accommodations/delete',
+                'accommodations/update',
             ],
         ];
 

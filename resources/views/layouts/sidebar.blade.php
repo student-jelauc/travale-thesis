@@ -37,7 +37,7 @@
             <i class="fas fa-fw fa-key"></i>
             <span>Rooms</span>
         </a>
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('room.types') }}">
             <i class="fas fa-fw fa-file"></i>
             <span>Room Types</span>
         </a>

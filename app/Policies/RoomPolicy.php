@@ -24,7 +24,7 @@ class RoomPolicy
      */
     public function viewAny(User $user)
     {
-        return $user->can('view', dd(request()));
+        return $user->can('accommodations/view');
     }
 
     /**
@@ -36,7 +36,7 @@ class RoomPolicy
      */
     public function view(User $user, Room $room)
     {
-        return $user->hasPermissionTo('accommodations_view') && $this->appertain($user, $room);
+        return $user->hasPermissionTo('accommodations/view') && $this->appertain($user, $room);
     }
 
     /**
@@ -47,7 +47,7 @@ class RoomPolicy
      */
     public function create(User $user)
     {
-        return $user->hasPermissionTo('accommodations_create');
+        return $user->hasPermissionTo('accommodations/create');
     }
 
     /**
@@ -59,7 +59,7 @@ class RoomPolicy
      */
     public function update(User $user, Room $room)
     {
-        return $user->hasPermissionTo('accommodations_update') && $this->appertain($user, $room);
+        return $user->hasPermissionTo('accommodations/update') && $this->appertain($user, $room);
     }
 
     /**
@@ -71,7 +71,7 @@ class RoomPolicy
      */
     public function delete(User $user, Room $room)
     {
-        return $user->hasPermissionTo('accommodations_delete') && $this->appertain($user, $room);
+        return $user->hasPermissionTo('accommodations/delete') && $this->appertain($user, $room);
     }
 
     /**
@@ -83,7 +83,7 @@ class RoomPolicy
      */
     public function restore(User $user, Room $room)
     {
-        return $user->hasPermissionTo('accommodations_delete') && $this->appertain($user, $room);
+        return $user->hasPermissionTo('accommodations/delete') && $this->appertain($user, $room);
     }
 
     /**
@@ -95,7 +95,7 @@ class RoomPolicy
      */
     public function forceDelete(User $user, Room $room)
     {
-        return $user->hasPermissionTo('accommodations_delete') && $this->appertain($user, $room);
+        return $user->hasPermissionTo('accommodations/delete') && $this->appertain($user, $room);
     }
 
     /**
