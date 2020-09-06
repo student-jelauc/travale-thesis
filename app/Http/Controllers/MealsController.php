@@ -18,6 +18,8 @@ class MealsController extends Controller
      */
     public function index()
     {
+        $this->authorize('viewAny', Meal::class);
+
         return view('meals.index', [
             'form' => $this->form(RoomTypeForm::class),
             'types' => Meal::selectQuery()->orderBy('name')->paginate(25),
@@ -31,6 +33,8 @@ class MealsController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('viewAny', Meal::class);
+
         $form = $this->form(RoomTypeForm::class);
         $form->redirectIfNotValid();
 

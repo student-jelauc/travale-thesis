@@ -20,6 +20,8 @@ class FacilitiesController extends Controller
      */
     public function index()
     {
+        $this->authorize('viewAny', Facility::class);
+
         return view('facilities.index', [
             'form' => $this->form(FacilityForm::class),
             'types' => Facility::selectQuery()->orderBy('rating', 'desc')->orderBy('name')->paginate(25),
@@ -33,6 +35,8 @@ class FacilitiesController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('create', Facility::class);
+
         $form = $this->form(FacilityForm::class);
         $form->redirectIfNotValid();
 
@@ -67,6 +71,8 @@ class FacilitiesController extends Controller
      */
     public function select()
     {
+        $this->authorize('viewAny', Facility::class);
+
         $builder = new Select2Builder(Facility::selectQuery());
 
         return $builder->make();

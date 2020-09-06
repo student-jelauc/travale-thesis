@@ -30,6 +30,8 @@ class RoomsController extends Controller
      */
     public function overview()
     {
+        $this->authorize('viewAny', Room::class);
+
         return view('rooms.overview', [
             'rooms' => Room::paginate(25)
         ]);
@@ -197,6 +199,8 @@ class RoomsController extends Controller
      */
     public function delete(Room $room)
     {
+        $this->authorize('delete', $room);
+
         $room->forceDelete();
 
         flash("Room '{$room->name}' deleted.")->success();

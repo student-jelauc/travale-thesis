@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb58c52d-649d-4b30-a661-0a0a3fa51b9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Forms/FacilityForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/FacilitiesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Policies/AccommodationTypePolicy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Policies/FacilityPolicy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Policies/MealPolicy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/facilities/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoomTypesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoomTypesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/RoomTypePolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/RoomTypePolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/accommodations/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/accommodations/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/rooms/overview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rooms/overview.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AccommodationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AccommodationsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FacilitiesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FacilitiesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MealsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MealsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PhotosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PhotosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoomsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoomsController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -251,7 +242,7 @@
       <workItem from="1588708876038" duration="139000" />
       <workItem from="1588782662644" duration="1057000" />
       <workItem from="1588873619013" duration="106000" />
-      <workItem from="1599245879075" duration="40497000" />
+      <workItem from="1599245879075" duration="40784000" />
     </task>
     <task id="LOCAL-00001" summary="Implement Database Logics&#10;Implement Entity Forms&#10;Add bootstrap theme&#10;Add permissions package">
       <created>1579878693689</created>
@@ -309,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599389791540</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add Facilities Types">
+      <created>1599398250990</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1599398250990</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,6 +337,7 @@
     <MESSAGE value="Add Room Types" />
     <MESSAGE value="Add Meals Types" />
     <MESSAGE value="Add Accommodation Type Types" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Accommodation Type Types" />
+    <MESSAGE value="Add Facilities Types" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Facilities Types" />
   </component>
 </project>

@@ -17,6 +17,8 @@ class PhotosController extends Controller
      */
     public function get($entity)
     {
+        $this->authorize('view', $entity);
+
         return response()->json(
             $entity->photosDetails()
         );
@@ -29,6 +31,8 @@ class PhotosController extends Controller
      */
     public function upload(Request $request, $entity)
     {
+        $this->authorize('update', $entity);
+
         foreach (Arr::wrap($request->file('file')) as $file) {
             $name = $file->getClientOriginalName();
             $path = $file->store("accommodations/{$entity->id}", 'public');
@@ -46,6 +50,8 @@ class PhotosController extends Controller
      */
     public function delete(Request $request, $entity)
     {
+        $this->authorize('update', $entity);
+
         $entity->photos()->where('name', $request->file)->delete();
     }
 }

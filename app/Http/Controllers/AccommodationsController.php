@@ -21,7 +21,6 @@ class AccommodationsController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->authorizeResource(Accommodation::class, 'accommodation');
     }
 
     /**
@@ -29,6 +28,8 @@ class AccommodationsController extends Controller
      */
     public function index()
     {
+        $this->authorize('viewAny', Accommodation::class);
+
         $accommodations = Accommodation::orderBy('name')->paginate(10);
 
         return view('accommodations.index', [
@@ -41,6 +42,8 @@ class AccommodationsController extends Controller
      */
     public function create()
     {
+        $this->authorize('create', Accommodation::class);
+
         $form = $this->form(AccommodationForm::class, [
             'method' => 'POST',
             'url' => route('accommodations.store'),
@@ -63,6 +66,8 @@ class AccommodationsController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('create', Accommodation::class);
+
         $form = $this->form(AccommodationForm::class);
         $form->redirectIfNotValid();
 
@@ -84,6 +89,8 @@ class AccommodationsController extends Controller
      */
     public function show(Accommodation $accommodation)
     {
+        $this->authorize('view', $accommodation);
+
         $form = $this->form(AccommodationForm::class, [
             'model' => $accommodation,
         ]);
@@ -108,6 +115,8 @@ class AccommodationsController extends Controller
      */
     public function edit(Accommodation $accommodation)
     {
+        $this->authorize('update', $accommodation);
+
         $form = $this->form(AccommodationForm::class, [
             'method' => 'POST',
             'url' => route('accommodations.update', $accommodation),
@@ -126,6 +135,8 @@ class AccommodationsController extends Controller
      */
     public function update(Accommodation $accommodation)
     {
+        $this->authorize('update', $accommodation);
+
         $form = $this->form(AccommodationForm::class);
         $form->redirectIfNotValid();
 
@@ -144,6 +155,8 @@ class AccommodationsController extends Controller
      */
     public function photos(Accommodation $accommodation)
     {
+        $this->authorize('view', $accommodation);
+
         return response()->json(
             $accommodation->photos->map(function ($photo) {
                 return [
@@ -162,6 +175,8 @@ class AccommodationsController extends Controller
      */
     public function delete(Accommodation $accommodation)
     {
+        $this->authorize('delete', $accommodation);
+
         $accommodation->forceDelete();
 
         flash("Accommodation '{$accommodation->name}' deleted.")->success();
@@ -174,6 +189,8 @@ class AccommodationsController extends Controller
      */
     public function select()
     {
+        $this->authorize('viewAny', Accommodation::class);
+
         $accommodations = Accommodation::selectQuery();
 
         $builder = new Select2Builder($accommodations);
