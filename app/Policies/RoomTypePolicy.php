@@ -28,7 +28,7 @@ class RoomTypePolicy
      * @param RoomType $roomType
      * @return mixed
      */
-    public function view(User $user, RoomType $roomType)
+    public function view(User $user, $roomType)
     {
         return $user->hasPermissionTo('accommodations/view') && $this->appertain($user, $roomType);
     }
@@ -51,7 +51,7 @@ class RoomTypePolicy
      * @param RoomType $roomType
      * @return mixed
      */
-    public function update(User $user, RoomType $roomType)
+    public function update(User $user, $roomType)
     {
         return $user->hasPermissionTo('accommodations/update') && $this->appertain($user, $roomType);
     }
@@ -63,9 +63,9 @@ class RoomTypePolicy
      * @param RoomType $roomType
      * @return mixed
      */
-    public function delete(User $user, RoomType $roomType)
+    public function delete(User $user, $roomType)
     {
-        return $user->hasPermissionTo('accommodations/delete') && $this->appertain($user, $roomType) && !$roomType->rooms()->exists();
+        return $user->hasPermissionTo('accommodations/delete') && $this->appertain($user, $roomType);
     }
 
     /**
@@ -75,7 +75,7 @@ class RoomTypePolicy
      * @param RoomType $roomType
      * @return mixed
      */
-    public function restore(User $user, RoomType $roomType)
+    public function restore(User $user, $roomType)
     {
         return $user->hasPermissionTo('accommodations/delete') && $this->appertain($user, $roomType);
     }
@@ -85,7 +85,7 @@ class RoomTypePolicy
      * @param RoomType $roomType
      * @return bool
      */
-    protected function appertain(User $user, RoomType $roomType)
+    protected function appertain(User $user, $roomType)
     {
         return $user->account_id === $roomType->account_id;
     }

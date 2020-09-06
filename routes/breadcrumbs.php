@@ -70,3 +70,8 @@ Breadcrumbs::for('room.types', function ($trail) {
 Breadcrumbs::for('meals', function ($trail) {
     $trail->push('Meals');
 });
+
+// Facilities
+Breadcrumbs::for('facilities', function ($trail) {
+    $trail->push('Facility');
+});

@@ -38,12 +38,16 @@
             <span>Rooms</span>
         </a>
         <a class="nav-link" href="{{ route('room.types') }}">
-            <i class="fas fa-fw fa-file"></i>
+            <i class="fas fa-fw fa-restroom"></i>
             <span>Room Types</span>
         </a>
         <a class="nav-link" href="{{ route('meals') }}">
             <i class="fas fa-fw fa-concierge-bell"></i>
             <span>Meals</span>
+        </a>
+        <a class="nav-link" href="{{ route('facilities') }}">
+            <i class="fas fa-fw fa-swimming-pool"></i>
+            <span>Facilities</span>
         </a>
     </li>
 

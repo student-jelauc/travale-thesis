@@ -37,6 +37,7 @@ Route::prefix('photos')->group(function () {
 
 Route::prefix('room/types')->group(function () {
     Route::get('/', 'RoomTypesController@index')->name('room.types');
+    Route::get('/select', 'RoomTypesController@select')->name('room.types.select');
     Route::post('/', 'RoomTypesController@store');
     Route::get('/{type}/delete', 'RoomTypesController@delete')->name('room.types.delete');
 });
@@ -46,5 +47,13 @@ Route::prefix('meals')->group(function () {
     Route::post('/', 'MealsController@store');
     Route::get('/{meal}/delete', 'MealsController@delete')->name('meals.delete');
 });
+
+Route::prefix('facilities')->group(function () {
+    Route::get('/', 'FacilitiesController@index')->name('facilities');
+    Route::get('/select', 'FacilitiesController@select')->name('facilities.select');
+    Route::post('/', 'FacilitiesController@store');
+    Route::get('/{facility}/delete', 'FacilitiesController@delete')->name('facilities.delete');
+});
+
 
 

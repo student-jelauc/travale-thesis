@@ -4,13 +4,14 @@
 namespace App\Http\Controllers;
 
 
-use App\Entities\Accommodations\RoomType;
+use App\Entities\Accommodations\Facility;
+use App\Forms\FacilityForm;
 use App\Forms\Helpers\FormBuilderTrait;
 use App\Forms\RoomTypeForm;
 use App\Helpers\Select2Builder;
 use Illuminate\Http\Request;
 
-class RoomTypesController extends Controller
+class FacilitiesController extends Controller
 {
     use FormBuilderTrait;
 
@@ -19,9 +20,9 @@ class RoomTypesController extends Controller
      */
     public function index()
     {
-        return view('room-types.index', [
-            'form' => $this->form(RoomTypeForm::class),
-            'types' => RoomType::selectQuery()->orderBy('name')->paginate(25),
+        return view('facilities.index', [
+            'form' => $this->form(FacilityForm::class),
+            'types' => Facility::selectQuery()->orderBy('rating', 'desc')->orderBy('name')->paginate(25),
         ]);
     }
 
@@ -32,31 +33,31 @@ class RoomTypesController extends Controller
      */
     public function store(Request $request)
     {
-        $form = $this->form(RoomTypeForm::class);
+        $form = $this->form(FacilityForm::class);
         $form->redirectIfNotValid();
 
-        $type = new RoomType();
-        $type->fill($form->getFieldValues());
-        $type->account_id = \Auth::user()->account_id;
-        $type->save();
+        $facility = new Facility();
+        $facility->fill($form->getFieldValues());
+        $facility->account_id = \Auth::user()->account_id;
+        $facility->save();
 
-        flash("'$type->name' has been successfully saved")->success();
+        flash("'$facility->name' has been successfully saved")->success();
 
         return redirect()->back();
     }
 
     /**
-     * @param RoomType $type
+     * @param Facility $facility
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function delete(RoomType $type)
+    public function delete(Facility $facility)
     {
-        $this->authorize('delete', $type);
+        $this->authorize('delete', $facility);
 
-        $type->delete();
+        $facility->delete();
 
-        flash("'$type->name' has been successfully deleted")->success();
+        flash("'$facility->name' has been successfully deleted")->success();
 
         return redirect()->back();
     }
@@ -66,7 +67,7 @@ class RoomTypesController extends Controller
      */
     public function select()
     {
-        $builder = new Select2Builder(RoomType::selectQuery());
+        $builder = new Select2Builder(Facility::selectQuery());
 
         return $builder->make();
     }

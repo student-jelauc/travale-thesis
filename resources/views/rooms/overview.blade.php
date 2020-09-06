@@ -10,14 +10,10 @@
                             <v-select name="accommodation_id" route-name="accommodations.select" placeholder="Select Accommodation"></v-select>
                         </div>
                         <div class="col">
-                            <select class="form-control" name="room_type_id">
-                                <option>Select Type</option>
-                            </select>
+                            <v-select name="room_type_id" route-name="room.types.select" placeholder="Select Room Types" multiple></v-select>
                         </div>
                         <div class="col">
-                            <select class="form-control" name="facilitiy_id[]">
-                                <option>Select Facilities</option>
-                            </select>
+                            <v-select name="facility_id" route-name="facilities.select" placeholder="Select Facility" multiple></v-select>
                         </div>
                         <div class="col">
                             <select class="form-control">
