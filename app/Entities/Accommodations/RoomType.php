@@ -39,7 +39,7 @@ class RoomType extends Model
      * @var array
      */
     protected $fillable = [
-        'name',
+        'name', 'account_id',
     ];
 
     /**

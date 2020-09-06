@@ -41,6 +41,10 @@
             <i class="fas fa-fw fa-file"></i>
             <span>Room Types</span>
         </a>
+        <a class="nav-link" href="{{ route('meals') }}">
+            <i class="fas fa-fw fa-concierge-bell"></i>
+            <span>Meals</span>
+        </a>
     </li>
 
     <!-- Divider -->

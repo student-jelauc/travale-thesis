@@ -41,3 +41,10 @@ Route::prefix('room/types')->group(function () {
     Route::get('/{type}/delete', 'RoomTypesController@delete')->name('room.types.delete');
 });
 
+Route::prefix('meals')->group(function () {
+    Route::get('/', 'MealsController@index')->name('meals');
+    Route::post('/', 'MealsController@store');
+    Route::get('/{meal}/delete', 'MealsController@delete')->name('meals.delete');
+});
+
+

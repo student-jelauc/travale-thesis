@@ -2,32 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb58c52d-649d-4b30-a661-0a0a3fa51b9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Forms/Fields/VSelect2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Helpers/Select2Builder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/RoomTypesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Policies/RoomTypePolicy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/QueryFilters.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/VSelect.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/room-types/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder/vselect2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Entities/Stays/Meal.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MealsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_06_085710_create_meals_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/MealsSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/meals/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Accommodations/Accommodation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Accommodations/Accommodation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Forms/RoomTypeForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Forms/RoomTypeForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AccommodationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AccommodationsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/AccommodationPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/AccommodationPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/RoomPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/RoomPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PermissionsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PermissionsSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/RolesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/RolesSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Entities/Accommodations/RoomType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Accommodations/RoomType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/rooms/overview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rooms/overview.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -206,18 +189,18 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Policies" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/database/seeds" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
+      <recent name="$PROJECT_DIR$/app/Entities/Accommodations" />
       <recent name="$PROJECT_DIR$/app/Policies" />
-      <recent name="$PROJECT_DIR$/resources/views/room_types" />
-      <recent name="$PROJECT_DIR$/resources/js/components" />
-      <recent name="$PROJECT_DIR$/resources/views/vendor/laravel-form-builder" />
-      <recent name="$PROJECT_DIR$/app/Helpers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Http/Controllers" />
@@ -264,7 +247,7 @@
       <workItem from="1588708876038" duration="139000" />
       <workItem from="1588782662644" duration="1057000" />
       <workItem from="1588873619013" duration="106000" />
-      <workItem from="1599245879075" duration="34877000" />
+      <workItem from="1599245879075" duration="36194000" />
     </task>
     <task id="LOCAL-00001" summary="Implement Database Logics&#10;Implement Entity Forms&#10;Add bootstrap theme&#10;Add permissions package">
       <created>1579878693689</created>
@@ -301,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599339614618</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add Room Types">
+      <created>1599382558780</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1599382558780</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +318,7 @@
     <MESSAGE value="Implement Rooms Controller" />
     <MESSAGE value="Add Accommodations Stars" />
     <MESSAGE value="Add Room Facilities" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Room Facilities" />
+    <MESSAGE value="Add Room Types" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Room Types" />
   </component>
 </project>
