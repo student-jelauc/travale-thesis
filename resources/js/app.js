@@ -26,6 +26,8 @@ require('moment');
 require('select2');
 
 
+$.fn.select2.defaults.set("theme", "bootstrap4");
+
 Vue.mixin({
     methods: {
         route: route,

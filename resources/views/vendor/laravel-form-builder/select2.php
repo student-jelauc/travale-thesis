@@ -26,7 +26,7 @@
 <script>
     window.addEventListener('load', function () {
         $('#{$options['id']}').select2({
-            theme: 'bootstrap', placeholder: '- {$options['label']} -',
+            theme: 'bootstrap4', placeholder: '- {$options['label']} -',
             allowClear: true,
             tags: '{$options['label']}',
             createTag: function (params) {

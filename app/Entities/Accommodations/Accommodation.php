@@ -53,7 +53,7 @@ class Accommodation extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'description', 'account_id', 'city_id', 'stars'
+        'name', 'description', 'account_id', 'city_id', 'stars', 'type_id'
     ];
 
     /**
@@ -78,6 +78,15 @@ class Accommodation extends Model
     public function rooms()
     {
         return $this->hasMany(Room::class);
+    }
+
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function type()
+    {
+        return $this->belongsTo(AccommodationType::class);
     }
 
     /**

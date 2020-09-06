@@ -11,6 +11,7 @@ $factory->define(Accommodation::class, function (Faker $faker) {
         'name' => $faker->company,
         'city_id' => City::offset(rand(1, City::count() - 1))->first()->id,
         'description' => $faker->text(150),
+        'stars' => rand(0, 5),
         'account_id' => \App\Entities\User::whereEmail('jelauc.valerian@gmail.com')->first()->account_id,
     ];
 });

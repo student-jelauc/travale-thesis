@@ -18,11 +18,13 @@ class CreateAccommodationsTable extends Migration
             $table->unsignedBigInteger('city_id')->nullable();
             $table->string('name');
             $table->tinyInteger('stars')->default(0);
+            $table->unsignedBigInteger('type_id')->nullable();
             $table->text('description')->nullable();
             $table->unsignedBigInteger('account_id');
             $table->timestamps();
             $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
             $table->foreign('city_id')->references('id')->on('cities')->onDelete('set null');
+            $table->foreign('type_id')->references('id')->on('accommodation_types')->onDelete('set null');
         });
     }
 
