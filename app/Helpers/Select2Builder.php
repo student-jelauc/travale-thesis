@@ -6,6 +6,7 @@ namespace App\Helpers;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Query\Expression;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Collection;
@@ -98,9 +99,9 @@ class Select2Builder
      *
      * @return Select2Builder
      */
-    public function setOrder(string $column, $dir = 'asc')
+    public function setOrder(...$orderBy)
     {
-        $this->order = [$column, $dir];
+        $this->order = $orderBy;
 
         return $this;
     }

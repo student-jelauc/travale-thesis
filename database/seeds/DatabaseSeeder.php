@@ -38,6 +38,7 @@ class DatabaseSeeder extends Seeder
         $this->call(FacilitiesSeeder::class);
         $this->call(MealsSeeder::class);
         $this->call(AccommodationTypesSeeder::class);
+        $this->call(AccommodationsSeeder::class);
 
         if (!$user->hasRole('master')) {
             $user->assignRole('master');

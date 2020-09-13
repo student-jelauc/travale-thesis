@@ -11,7 +11,10 @@ use App\Entities\Accommodations\RoomType;
 use App\Forms\Helpers\FormBuilderTrait;
 use App\Forms\RoomForm;
 use App\Forms\RoomsForm;
+use App\Helpers\Select2Builder;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\DB;
 
 class RoomsController extends Controller
 {
@@ -26,14 +29,36 @@ class RoomsController extends Controller
     }
 
     /**
+     * @param Request $request
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function overview()
+    public function overview(Request $request)
     {
         $this->authorize('viewAny', Room::class);
 
+        $query = Room::selectQuery()
+            ->with('accommodation')
+            ->orderBy('accommodation_id')
+            ->orderBy(\DB::raw("NULLIF(regexp_replace(floor, '\D', '', 'g'), '')::int"))
+            ->orderBy('room_type_id');
+
+        foreach (['accommodation_id', 'room_type_id', 'floor'] as $filter) {
+            if (!$request->{$filter}) {
+                continue;
+            }
+
+            $query->whereIn($filter, Arr::wrap($request->{$filter}));
+        }
+
+        if ($request->facility_id) {
+            $query->whereHas('facilities', function ($query) use ($request) {
+                $query->whereIn('entity_id', Arr::wrap($request->facility_id));
+            });
+        }
+
         return view('rooms.overview', [
-            'rooms' => Room::paginate(25)
+            'rooms' => $query->paginate(200)
         ]);
     }
 
@@ -53,7 +78,7 @@ class RoomsController extends Controller
         }
 
         return view('rooms.index', [
-            'rooms' => $rooms->orderBy('name')->paginate(20),
+            'rooms' => $rooms->orderBy(\DB::raw("NULLIF(regexp_replace(floor, '\D', '', 'g'), '')::int"))->orderBy('name')->paginate(25),
             'accommodation' => $accommodation,
             'type' => $type,
         ]);
@@ -82,14 +107,12 @@ class RoomsController extends Controller
 
         if ($accommodation) {
             $form->getField('accommodation_id')
-                ->setOption('selected', $accommodation->id)
-            ;
+                ->setOption('selected', $accommodation->id);
         }
 
         if ($type) {
             $form->getField('room_type_id')
-                ->setOption('selected', $type->id)
-            ;
+                ->setOption('selected', $type->id);
         }
 
         return view('rooms.create', [
@@ -120,7 +143,7 @@ class RoomsController extends Controller
 
             $room->facilities()->sync($form->getFieldValues()['facilities'] ?? []);
 
-            app()->get(PhotosController::class)->upload($request, 'room', $room);
+            app()->get(PhotosController::class)->upload($request, $room);
         }
 
         flash('Successfully created')->success();
@@ -206,5 +229,21 @@ class RoomsController extends Controller
         flash("Room '{$room->name}' deleted.")->success();
 
         return redirect()->route('rooms', $room->accommodation, $room->roomType);
+    }
+
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function floors()
+    {
+        $builder = new Select2Builder(
+            Room::select('floor')
+                ->from(Room::selectQuery()->select('floor')->distinct(), 'r')
+        );
+
+        $builder->setSelectColumns('floor', 'floor');
+        $builder->setOrder(\DB::raw("NULLIF(regexp_replace(floor, '\D', '', 'g'), '')::int"));
+
+        return $builder->make();
     }
 }

@@ -5,27 +5,31 @@
         <div class="col-md-12">
             <div class="card border-0 shadow-sm">
                 <div class="card-footer">
-                    <div class="row">
-                        <div class="col">
-                            <v-select name="accommodation_id" route-name="accommodations.select" placeholder="Select Accommodation"></v-select>
-                        </div>
-                        <div class="col">
-                            <v-select name="room_type_id" route-name="room.types.select" placeholder="Select Room Types" multiple></v-select>
-                        </div>
-                        <div class="col">
-                            <v-select name="facility_id" route-name="facilities.select" placeholder="Select Facility" multiple></v-select>
-                        </div>
-                        <div class="col">
-                            <select class="form-control">
-                                <option>Select Floor</option>
-                            </select>
-                        </div>
-                    </div>
+                    <query-filters></query-filters>
+                    <overview-filters></overview-filters>
                 </div>
                 <div class="card-body">
-                    <div class="list-group">
+                    @php
+                        $accommodation = false;
+                        $floor = false;
+                    @endphp
+                    <div class="row">
                         @foreach($rooms as $room)
+                            @if (@$room->accommodation->name !== $accommodation && $accommodation = @$room->accommodation->name)
+                                <label class="h3 col-md-12 text-gray-700 mt-3"><span>{{ $accommodation }}</span></label>
+                            @endif
 
+                            @if ($room->floor !== $floor && $floor = @$room->floor)
+                                <label class="h5 col-md-12 text-gray-500">
+                                    <hr/>
+                                    Floor {{ $floor }}
+                                </label>
+                            @endif
+
+                            <div class="btn btn-outline-primary btn-lg m-1">
+                                <span class="font-weight-bolder">{{ $room->name }}</span>
+                                <div><small class="text-lowercase">{{ @$room->roomType->name }}</small></div>
+                            </div>
                         @endforeach
                     </div>
                 </div>

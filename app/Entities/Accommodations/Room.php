@@ -83,4 +83,16 @@ class Room extends Model
     {
         return $this->morphToMany(Facility::class, 'entity', 'entity_has_facility');
     }
+
+    /**
+     * @return RoomType|\Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder
+     */
+    public static function selectQuery()
+    {
+        return static::whereIn('accommodation_id', function ($query) {
+            $query->select('id')
+                ->from('accommodations')
+                ->where('account_id', \Auth::user()->account_id);
+        });
+    }
 }

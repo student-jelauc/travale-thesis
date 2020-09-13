@@ -14,7 +14,7 @@ class CreateEntityHasFacilityTable extends Migration
     public function up()
     {
         Schema::create('entity_has_facility', function (Blueprint $table) {
-            $table->string('entity_id');
+            $table->unsignedBigInteger('entity_id');
             $table->string('entity_type');
             $table->unsignedBigInteger('facility_id');
             $table->timestamps();

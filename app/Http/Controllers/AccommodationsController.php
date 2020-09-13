@@ -30,7 +30,9 @@ class AccommodationsController extends Controller
     {
         $this->authorize('viewAny', Accommodation::class);
 
-        $accommodations = Accommodation::orderBy('name')->paginate(10);
+        $accommodations = Accommodation::with('city', 'city.country', 'type')
+            ->orderBy('name')
+            ->paginate(25);
 
         return view('accommodations.index', [
             'accommodations' => $accommodations,
@@ -78,7 +80,7 @@ class AccommodationsController extends Controller
 
         flash('Successfully created')->success();
 
-        app()->get(PhotosController::class)->upload($request,'accommodation', $accommodation);
+        app()->get(PhotosController::class)->upload($request, $accommodation);
 
         return redirect()->route('accommodations.show', $accommodation);
     }
@@ -194,6 +196,7 @@ class AccommodationsController extends Controller
         $accommodations = Accommodation::selectQuery();
 
         $builder = new Select2Builder($accommodations);
+        $builder->setOrder('name');
 
         return $builder->make();
     }

@@ -2,6 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
+use App\Entities\Accommodations\AccommodationType;
 use App\Entities\Geography\City;
 use Faker\Generator as Faker;
 use App\Entities\Accommodations\Accommodation;
@@ -9,9 +10,7 @@ use App\Entities\Accommodations\Accommodation;
 $factory->define(Accommodation::class, function (Faker $faker) {
     return [
         'name' => $faker->company,
-        'city_id' => City::offset(rand(1, City::count() - 1))->first()->id,
         'description' => $faker->text(150),
         'stars' => rand(0, 5),
-        'account_id' => \App\Entities\User::whereEmail('jelauc.valerian@gmail.com')->first()->account_id,
     ];
 });

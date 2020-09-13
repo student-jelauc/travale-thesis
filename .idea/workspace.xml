@@ -2,12 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb58c52d-649d-4b30-a661-0a0a3fa51b9d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/factories/RoomFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/OverviewFilters.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Entities/Accommodations/Room.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Accommodations/Room.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/Select2Builder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/Select2Builder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AccommodationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AccommodationsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FacilitiesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FacilitiesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MealsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MealsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PhotosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PhotosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoomTypesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoomTypesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoomsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoomsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/AccommodationFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/AccommodationFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_05_204700_create_entity_has_facility_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_05_204700_create_entity_has_facility_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/AccommodationsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/AccommodationsSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/FacilitiesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/FacilitiesSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/rooms/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rooms/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/rooms/overview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rooms/overview.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -214,6 +227,26 @@
       </list>
     </option>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@da98d746" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@da98d746" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@53552268" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -242,7 +275,8 @@
       <workItem from="1588708876038" duration="139000" />
       <workItem from="1588782662644" duration="1057000" />
       <workItem from="1588873619013" duration="106000" />
-      <workItem from="1599245879075" duration="40784000" />
+      <workItem from="1599245879075" duration="48316000" />
+      <workItem from="1600001957768" duration="355000" />
     </task>
     <task id="LOCAL-00001" summary="Implement Database Logics&#10;Implement Entity Forms&#10;Add bootstrap theme&#10;Add permissions package">
       <created>1579878693689</created>
@@ -307,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599398250990</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Set Security Policies">
+      <created>1599398565294</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1599398565294</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +379,7 @@
     <MESSAGE value="Add Meals Types" />
     <MESSAGE value="Add Accommodation Type Types" />
     <MESSAGE value="Add Facilities Types" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Facilities Types" />
+    <MESSAGE value="Set Security Policies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set Security Policies" />
   </component>
 </project>

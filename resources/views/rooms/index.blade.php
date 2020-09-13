@@ -18,15 +18,24 @@
                                              alt="{{ $room->name }}"/>
                                     </div>
                                     <div class="col-md-11">
-                                        <div class="flex-column align-items-start">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1">{{ $room->name }}</h5>
-                                                <small>{{ $room->roomType->name }}</small>
+                                        <div class="row">
+                                            <div class="col-9">
+                                                <div class="col-12"><h5 class="mb-1">{{ $room->name }}</h5></div>
+                                                <div class="col-12">
+                                                    {{ strlen($room->description) > 200 ? substr($room->description, 0, 200) . '...' : $room->description }}
+                                                </div>
+                                                <div class="col-12">
+                                                    <small>{{ $room->adults_capacity }} adults, {{ $room->children_capacity }} children, {{ $room->infants_capacity }} infants </small>
+                                                </div>
                                             </div>
-                                            <p class="mb-1">
-                                                {{ strlen($room->description) > 200 ? substr($room->description, 0, 200) . '...' : $room->description }}
-                                            </p>
-                                            <small>{{ $room->adults_capacity }} adults, {{ $room->children_capacity }} children, {{ $room->infants_capacity }} infants </small>
+                                            <div class="col-3 text-right">
+                                                <div class="col-12">
+                                                    <small>{{ $room->roomType->name }}</small>
+                                                </div>
+                                                <div class="col-12">
+                                                    <small>Floor {{ $room->floor }}</small>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

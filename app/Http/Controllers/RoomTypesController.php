@@ -67,6 +67,7 @@ class RoomTypesController extends Controller
     public function select()
     {
         $builder = new Select2Builder(RoomType::selectQuery());
+        $builder->setOrder('name');
 
         return $builder->make();
     }
